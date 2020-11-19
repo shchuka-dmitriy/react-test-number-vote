@@ -1,0 +1,49 @@
+@import '../../assets/breakpoints'
+@import "../../assets/flexConstants"
+@import "../../assets/commonStyles.module"
+
+.mainInfoContainer
+  display: flex
+  align-items: center
+  justify-content: stretch
+  padding: 20px
+  width: 90%
+  margin: 50px auto 50px
+  box-shadow: 0 5px 10px 3px rgba(0,0,0,0.1)
+  height: auto
+  @media(max-width: $sm)
+    width: auto
+
+  .statisticContainerWrapper
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 70%
+    @media(max-width: 1160px)
+      width: 90%
+
+    .paginationButton
+      font-family: Nunito, sans-serif
+      text-align: center
+      color: #6e7272
+      font-size: 18px
+      border-radius: 10px
+      padding: 15px 30px
+      font-weight: 700
+      cursor: pointer
+      text-transform: uppercase
+      min-height: 50px
+      margin-bottom: 10px
+      &:hover
+        background-color: #c0c1c7
+
+    .notActive
+      opacity: 0.5
+      &:hover
+        background-color: inherit
+
+    .logsContainer
+      width: 100%
+      max-width: 1000px
