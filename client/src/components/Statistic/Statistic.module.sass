@@ -1,0 +1,69 @@
+@import '../../assets/breakpoints'
+@import "../../assets/flexConstants"
+@import "../../assets/commonStyles.module"
+
+.mainInfoContainer
+  display: flex
+  align-items: center
+  justify-content: stretch
+  padding: 20px
+  width: 90%
+  margin: 50px auto 50px
+  box-shadow: 0 5px 10px 3px rgba(0,0,0,0.1)
+  height: auto
+  @media(max-width: $sm)
+    width: auto
+
+  .statisticContainerWrapper
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 70%
+    @media(max-width: 1160px)
+      width: 90%
+      flex-direction: column
+    @media(max-width: $lg)
+      flex-direction: column
+
+    .statisticContainerNavigation
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 50px
+      width: 100%
+      @media(max-width: $mmd)
+        flex-direction: column
+
+      .inputMainContainer
+        @extend .flexColumnCenter
+        flex-direction: row
+        justify-content: center
+        padding: 15px 10px
+        @media(max-width: $xms)
+          flex-direction: column
+
+        .selectDateLabel
+          @extend .nunitoFont
+          @media(max-width: $xms)
+            margin-bottom: 10px
+
+      .voteButton
+        @extend .modakFont
+        text-align: center
+        color: #46568a
+        font-size: 26px
+        border-radius: 10px
+        padding: 15px 30px
+        cursor: pointer
+        text-transform: uppercase
+        min-height: 50px
+        &:hover
+          background-color: #727cf5
+          color: #333f68
+          transition: background-color .30s
+
+    .notFoundLabel
+      @extend .flexColumnCenter
+      @extend .nunitoFont
+      text-align: center
