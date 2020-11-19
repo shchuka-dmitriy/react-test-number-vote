@@ -1,0 +1,48 @@
+@import "../../assets/breakpoints"
+@import "../../assets/flexConstants"
+
+*
+  box-sizing: border-box
+
+.descriptionContainer
+  @extend .flexCenter
+  justify-content: space-between
+  position: relative
+  background-color: rgba(168, 165, 165, 0.4)
+  padding: 11px 15px
+  font-weight: 500
+  font-size: 14px
+  overflow: hidden
+  margin-bottom: 11px
+  border: 2px solid burlywood
+  width: 100%
+  @media (max-width: 850px)
+    flex-direction: column
+  @media (max-width: $md)
+    padding: 5px 7px
+
+  .containerPart
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    @media (max-width: 850px)
+      width: 100%
+
+    .title
+      width: 100%
+      font-family: Montserrat, sans-serif
+      font-size: 20px
+      font-weight: 700
+      text-transform: capitalize
+      color: #6e7272
+      margin-top: 5px
+      margin-bottom: 5px
+
+    .title + .title
+      margin-left: 35px
+
+  .containerPart + .containerPart
+    margin-left: 10px
+    @media (max-width: 850px)
+      margin-left: 0
+      margin-top: 5px
