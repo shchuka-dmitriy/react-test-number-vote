@@ -1,0 +1,41 @@
+@import '../../assets/commonStyles.module'
+@import '../../assets/breakpoints'
+
+*
+  box-sizing: border-box
+
+.numberListMainContainer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-top: 30px
+  width: 100%
+  max-width: 700px
+  @media(max-width: $md)
+    max-width: 500px
+  @media(max-width: $xms)
+    max-width: 400px
+
+  .numberElem
+    width: 30%
+    margin-right: 15px
+    margin-bottom: 25px
+    border-radius: 10px
+    border: 1px solid burlywood
+    background-color: rgba(250, 235, 215, 0.5)
+    &:hover
+      box-shadow: 0 0 20px 0 rgb(101, 84, 226)
+      background-color: rgba(101, 84, 226, 0.5)
+      transition: box-shadow .30s
+    @media(max-width: $md)
+      margin-right: 10px
+      margin-bottom: 15px
+
+    .number
+      @extend .modakFont
+      font-size: 150px
+      @media(max-width: $md)
+        font-size: 100px
+      @media(max-width: $xms)
+        font-size: 70px
