@@ -1,0 +1,18 @@
+@import '../../assets/breakpoints'
+@import '../../assets/commonStyles.module'
+
+.mainContainer
+  margin-top: 30px
+
+  .mainHeader
+    @extend .modakFont
+    text-transform: uppercase
+
+    @media(max-width: 1450px)
+      font-size: 70px
+
+    @media(max-width: 1015px)
+      font-size: 50px
+
+    @media(max-width: $md)
+      font-size: 30px
